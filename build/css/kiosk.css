@@ -10,7 +10,7 @@ html, body {
   height: inherit;
 }
 
-#Welcome {
+#navbar{
   height: 15%;
   background-color: #96C0CE;
   border: 6px solid #a8cbd6;
@@ -18,11 +18,9 @@ html, body {
 
 }
 
-#Welcome div:first-child {
+#navbar img {
   height: 100%;
-  background-image: url("/img/paycelogo.png");
-  background-size: contain;
-  background-repeat: no-repeat;
+  width: 100%;
 }
 
 .welcometxt {
@@ -45,22 +43,30 @@ html, body {
   height: 100%;
 }
 
-.LeftSidebar {
+#leftsidebar {
   height: 100%;
+
+}
+
+#leftsidebar > div{
+  height: 100%;
+  width: 100%;
 }
 
 .scanimg {
   height: 60%;
+
   padding-top: 20px;
   padding-bottom: 20px;
 }
 
-.scan {
+
+.scan{
   height: 100%;
+
   background-image: url("/img/scanTicket.png");
   background-size: cover;
   border: 6px solid #a8cbd6;
-
 }
 
 .scanbox {
@@ -82,14 +88,14 @@ html, body {
   text-align: center;
 }
 
-.middle {
+#middle{
   height: 100%;
   padding-left: 10%;
   padding-right: 10%;
   font-size: 1.5vw;
 }
 
-.ticketinstr {
+#ticketinfo {
   min-height: 30%;
   height: auto;
   overflow: hidden;
@@ -103,7 +109,7 @@ html, body {
 
 }
 
-.ticketinstr>div {
+#ticketinfo > div {
   position: absolute;
   height: auto;
   width: auto;
@@ -137,8 +143,13 @@ html, body {
   background-color: #ffa64d;
 }
 
-.scanvideo {
+#scanvideo {
   height: 70%;
+}
+
+#scanvideo > div{
+  height: 100%;
+  width: 100%;
 }
 
 .videocont {
@@ -171,9 +182,13 @@ html, body {
   border: 6px solid #a8cbd6;
 }
 
-.RightSidebar {
+#rightsidebar {
   height: 100%;
   font-size: 1vw;
+}
+#rightsidebar > div{
+  height: 100%;
+  width: 100%;
 }
 
 .helploc {

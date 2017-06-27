@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-
+<title>kiosk</title>
   <meta charset="utf-8">
 
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,141 +19,45 @@
   <div id="maingrid" class="container-fluid">
 
 
+<!--navbar-->
+    <div id="navbar" class="row-fluid">
 
-    <div id="Welcome" class="row-fluid">
-      <div class="col-md-2">
-
-      </div>
-      <div class="col-md-2">
-
-      </div>
-
-      <div class="welcometxt col-md-4">
-
-
-
-        Welcome
-        <br /> Please Scan your Valet Ticket
-        <br />time
-
-      </div>
-      <div class="col-md-4">
-
-      </div>
 
     </div>
+    <!--navbar-->
 
     <div class="row-fluid Content">
-      <div class="col-md-3 LeftSidebar">
-        <div class="row-fluid scanbox">
 
-          <form>
-            <input type="text" value="Scan Ticket">
+      <!--leftsidebar-->
+      <div id="leftsidebar" class="col-md-3">
 
-          </form>
-
-        </div>
-
-
-        <div class="row-fluid scanimg">
-          <div class="col-md-3">
-
-          </div>
-          <div class="col-md-6 scan">
-
-          </div>
-          <div class="col-md-3">
-
-          </div>
-
-        </div>
-
-        <div class="last row-fluid">
-
-        </div>
       </div>
+<!--leftsidebar-->
 
+<!--middle-->
+      <div id="middle" class="col-md-6">
+        <div id="ticketinfo" class="row-fluid">
 
-      <div class="col-md-6 middle">
-        <div class="row-fluid ticketinstr">
-          <div>
-
-
-            <div class=row-fluid>
-              <div class="col-md-6">
-                <span class="alignrt">Ticket #:</span>
-              </div>
-              <div class="alignct col-md-6">
-                <span class="alignct blue">1234-3</span>
-              </div>
-            </div>
-
-            <div class=row-fluid>
-              <div class="col-md-6">
-                <span class="alignrt">Validations:</span>
-              </div>
-              <div class="alignct col-md-6">
-                <span class="alignct green">HP</span>&nbsp; <!--Need to eventually turn word wrap on-->
-              </div>
-            </div>
-
-            <div class=row-fluid>
-              <div class="col-md-6">
-                <span class="alignrt">Amount Due:</span>
-              </div>
-              <div class="alignct col-md-6">
-                <span class="alignct orange">$7.00</span>
-              </div>
-            </div>
-          </div>
         </div>
-        <div class="row-fluid scanvideo">
-          <div class="row-fluid instructions">
-            Bar Code Faces Up
-            <br /> Move the ticket so the scanner
-            <br /> light can read the bar code:
-          </div>
-          <div class="videocont row-fluid">
-            <video src="/img/KioskScanTicket.m4v" autoplay loop></video>
-          </div>
+        <div id="scanvideo" class="row-fluid">
+
         </div>
 
       </div>
 
-      <div class="col-md-3 RightSidebar">
-        <div class="row-fluid helploc">
-          <div>
+      <!--middle-->
 
-
-          <button>
-              Help?
-              <br />
-              Click for Assistance
-            </button>
-          </div>
-        </div>
-
-        <div class="row-fluid paymentloc">
-          <div class="row-fluid paymentopt">
-            <div>
-
-              Payment Options
-            </div>
-          </div>
-
-          <div class="row-fluid paymenttype">
-
-            <button>Credit/Debit</button>
-
-
-            <button class="cash">Cash Payments</button>
-
-          </div>
-        </div>
+      <!--rightsidebar-->
+      <div id="rightsidebar" class="col-md-3">
+        
       </div>
+
+      <!--rightsidebar-->
+
+
     </div>
   </div>
-  </div>
+
 
 
 
@@ -169,6 +73,7 @@
   or include individual files as needed -->
 
   <script src="js/bootstrap.min.js"></script>
+  <script src="js/app.js"></script>
 </body>
 
 </html>
