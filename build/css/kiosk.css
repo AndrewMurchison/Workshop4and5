@@ -1,0 +1,227 @@
+html, body {
+  height: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #FEF6EB;
+  font-family: "Avant Garde", sans-serif;
+}
+
+#maingrid {
+  height: inherit;
+}
+
+#Welcome {
+  height: 15%;
+  background-color: #96C0CE;
+  border: 6px solid #a8cbd6;
+  border-bottom: none;
+
+}
+
+#Welcome div:first-child {
+  height: 100%;
+  background-image: url("/img/paycelogo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.welcometxt {
+  overflow: hidden;
+  height: auto;
+  text-align: center;
+  font-size: 1.5vw;
+  color: black;
+}
+
+.Content {
+  height: 85%;
+  padding-top: 30px;
+  background-color: #96C0CE;
+  border: 6px solid #a8cbd6;
+
+}
+
+.Content>div {
+  height: 100%;
+}
+
+.LeftSidebar {
+  height: 100%;
+}
+
+.scanimg {
+  height: 60%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.scan {
+  height: 100%;
+  background-image: url("/img/scanTicket.png");
+  background-size: cover;
+  border: 6px solid #a8cbd6;
+
+}
+
+.scanbox {
+  height: 20%;
+  text-align: center;
+  padding-top: 30%;
+  padding-bottom: 10%;
+
+}
+
+.last {
+  height: 20%;
+}
+
+.scanbox>form>input {
+  font-size: 1.5vw;
+  width: 50%;
+  border: 6px solid #a8cbd6;
+  text-align: center;
+}
+
+.middle {
+  height: 100%;
+  padding-left: 10%;
+  padding-right: 10%;
+  font-size: 1.5vw;
+}
+
+.ticketinstr {
+  min-height: 30%;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+
+  border: 6px solid #a8cbd6;
+  background-color: #bad6de;
+
+
+}
+
+.ticketinstr>div {
+  position: absolute;
+  height: auto;
+  width: auto;
+  top: 50%;
+  left: 60%;
+  transform: translate(-60%, -50%);
+  white-space: nowrap;
+}
+
+.alignrt {
+  float: right;
+}
+
+.alignct {
+  color: white;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.blue {
+  background-color: #0099ff;
+}
+
+.green {
+  background-color: #66cc66;
+}
+
+.orange {
+  background-color: #ffa64d;
+}
+
+.scanvideo {
+  height: 70%;
+}
+
+.videocont {
+  height: 60%;
+  width: 100%;
+  position: relative;
+  margin-top: 20px;
+  background-color: #bad6de;
+  border: 6px solid #a8cbd6;
+}
+
+.videocont>video {
+  position: absolute;
+  height: 90%;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+
+}
+
+.instructions {
+  height: auto;
+  min-height: 20%;
+  text-align: center;
+  font-size: 1vw;
+  overflow: hidden;
+  background-color: #bad6de;
+  border: 6px solid #a8cbd6;
+}
+
+.RightSidebar {
+  height: 100%;
+  font-size: 1vw;
+}
+
+.helploc {
+  margin-bottom: 20px;
+  height: 30%;
+}
+
+.helploc div{
+  width: 100%;
+  height: 30%;
+  border: 6px solid #a8cbd6;
+
+}
+.helploc button {
+  width: 100%;
+  height: 100%;
+
+
+}
+
+.paymentloc {
+  height: 70%;
+}
+
+.paymentopt {
+  height: 20%;
+  background-color: #bad6de;
+  border: 6px solid #a8cbd6;
+
+
+  position: relative;
+}
+
+.paymentopt>div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.paymenttype {
+  height: 12.9%;
+  margin-top: 20px;
+  border: 6px solid #a8cbd6;
+}
+
+.paymentloc button {
+  width: 50%;
+  height: 100%;
+  float: left;
+}
