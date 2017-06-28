@@ -9,7 +9,7 @@ export default class Rightsidebar extends React.Component {
 
 
           <button>
-              Help?
+              {this.props.val}
               <br />
               Click for Assistance
             </button>
