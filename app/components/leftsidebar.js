@@ -1,12 +1,38 @@
 import React from 'react';
 
 export default class Leftsidebar extends React.Component {
+
+constructor(props){
+  super(props);
+  this.state={
+    value: ""
+  };
+}
+
+
+  handleReturn(e){
+    //e.preventDefault();
+    if (e.key === 'Enter') {
+      this.setState({value: "fish"});
+    }
+
+  }
+
+  handleChange(e){
+    e.preventDefault();
+
+      this.setState({value: e.target.value});
+
+
+  }
+
+
   render() {
     return (
       <div>
       <div className="row-fluid scanbox">
         <form>
-          <input type="text" />
+          <input type="text" placeholder="Scan Ticket" value={this.state.value} onChange={(e) => this.handleChange(e)} onKeyDown={(e) => this.handleReturn(e)} />
         </form>
       </div>
       <div className="row-fluid scanimg">

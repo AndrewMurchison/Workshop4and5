@@ -1,8 +1,26 @@
 import React from 'react';
 import Validations from './validations.js';
-
+import {getTicketInfo} from '../server';
 export default class Ticketinfo extends React.Component {
+
+constructor(props){
+  super(props);
+  this.state={
+    ticketnum: ""
+  };
+}
+
+componentDidMount(){
+  getTicketInfo(this.props.ticket, (fd)=>{
+    this.setState({ticketnum: fd});
+  })
+}
+
+
+
+
   render() {
+    var data = this.state.ticketnum;
     return (
       <div>
 
@@ -12,7 +30,7 @@ export default class Ticketinfo extends React.Component {
             <span className="alignrt">Ticket #:</span>
           </div>
           <div className="col-md-6">
-            <span className="alignct blue">{this.props.ticketnum}</span>
+            <span className="alignct blue">{data.num}</span>
           </div>
         </div>
 
@@ -32,7 +50,7 @@ export default class Ticketinfo extends React.Component {
             <span className="alignrt">Amount Due:</span>
           </div>
           <div className="col-md-6">
-            <span className="alignct orange">{this.props.amtdue}</span>
+            <span className="alignct orange">${data.amtdue}</span>
           </div>
         </div>
       </div>

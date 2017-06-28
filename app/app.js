@@ -21,7 +21,7 @@ ReactDOM.render(
   );
 
   ReactDOM.render(
-    <Ticketinfo ticketnum="1234-3" amtdue="$7.50" />,
+    <Ticketinfo ticket={5} />,
     document.getElementById('ticketinfo')
   );
 
