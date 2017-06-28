@@ -3,7 +3,7 @@ import React from 'react';
 export default class Rightsidebar extends React.Component {
   render() {
     return (
-        <div>
+      <div id="rightsidebar" className="col-md-3">
         <div className="row-fluid helploc">
           <div>
 

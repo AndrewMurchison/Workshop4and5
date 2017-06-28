@@ -3,7 +3,10 @@ import React from 'react';
 export default class Navbar extends React.Component {
   render() {
     return (
-      <div>
+      <div id="navbar" className="row-fluid">
+
+
+
       <div className="col-md-2">
         <img src="/img/paycelogo.png" />
       </div>
@@ -17,6 +20,7 @@ export default class Navbar extends React.Component {
       <div className="col-md-4">
       </div>
       </div>
+
     );
   }
 }

@@ -29,7 +29,9 @@ constructor(props){
 
   render() {
     return (
-      <div>
+      <div id="leftsidebar" className="col-md-3">
+
+
       <div className="row-fluid scanbox">
         <form>
           <input type="text" placeholder="Scan Ticket" value={this.state.value} onChange={(e) => this.handleChange(e)} onKeyDown={(e) => this.handleReturn(e)} />

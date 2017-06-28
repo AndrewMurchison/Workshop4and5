@@ -22,9 +22,9 @@ componentDidMount(){
   render() {
     var data = this.state.ticketnum;
     return (
-      <div>
-
-
+      <div id="middle" className="col-md-6">
+      <div id="ticketinfo" className="row-fluid">
+        <div>
         <div className="row-fluid">
           <div className="col-md-6">
             <span className="alignrt">Ticket #:</span>
@@ -54,6 +54,22 @@ componentDidMount(){
           </div>
         </div>
       </div>
+      </div>
+
+      <div id="scanvideo" className="row-fluid">
+      <div className="row-fluid instructions">
+        Bar Code Faces Up
+        <br /> Move the ticket so the scanner
+        <br /> light can read the bar code:
+      </div>
+      <div className="videocont row-fluid">
+          <video loop autoPlay>
+            <source src="/img/KioskScanTicket.m4v" type="video/mp4" />
+          </video>
+        </div>
+      </div>
+
+    </div>
     );
   }
 }
