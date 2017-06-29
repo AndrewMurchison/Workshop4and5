@@ -24,6 +24,7 @@
     "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
-    "react-bootstrap-validation": "^0.1.11"
+    "react-bootstrap-validation": "^0.1.11",
+    "react-modal": "^2.2.0"
   }
 }

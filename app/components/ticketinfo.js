@@ -11,7 +11,19 @@ constructor(props){
 }
 
   render() {
-    var data = this.props.ticketnum;
+
+var data = this.props.ticketnum;
+var valid;
+if(data.validationarr!= undefined){
+  valid = data.validationarr;
+}
+else{
+valid = [
+  {
+    name: ""
+  }
+];
+}
     return (
       <div id="middle" className="col-md-6">
 
@@ -31,9 +43,16 @@ constructor(props){
             <span className="alignrt">Validations:</span>
           </div>
           <div className="col-md-6">
-            <Validations validate="HP" />
-            &nbsp;
-            <Validations validate="HP" />
+            {
+              valid.map((nm)=>{
+                return(
+
+                  <Validations validate={nm.name} />
+
+
+                );
+              })
+            }
           </div>
         </div>
 

@@ -3,7 +3,7 @@ import Ticketinfo from './ticketinfo.js';
 import Leftsidebar from './leftsidebar.js';
 import Rightsidebar from './rightsidebar.js';
 import {getTicketInfo} from '../server';
-
+import ModalBox from './modal.js';
 export default class Content extends React.Component {
 
   constructor(props){
@@ -12,7 +12,8 @@ export default class Content extends React.Component {
     this.handleTicketReturn = this.handleTicketReturn.bind(this);
     this.state = {
       ticketid: "",
-      ticketnum: ""
+      ticketnum: "",
+      modalToggle: false
     };
   }
 
@@ -25,6 +26,9 @@ export default class Content extends React.Component {
     getTicketInfo(ticketid.target.value, (fd)=>{
       this.setState({ticketnum: fd});
     });
+    var modal = this.state.modalToggle;
+    this.setState({modalToggle: !modal})
+
   }
 
 
@@ -32,7 +36,9 @@ export default class Content extends React.Component {
 
     return (
       <div id="Content" className="row-fluid">
+       <ModalBox modalToggle={this.state.modalToggle} />
       <Leftsidebar ticketid={this.state.ticketid} onTicketReturn={this.handleTicketReturn}  onTicketChange={this.handleTicketChange} />
+
       <Ticketinfo ticketnum={this.state.ticketnum} ticketid={this.state.ticketid} />
       <Rightsidebar />
       </div>

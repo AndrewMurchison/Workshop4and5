@@ -7,7 +7,16 @@ var initialData = {
       "num": "1234-3",
       "amtdue": 7.50,
       "validationarr": [
-        1,3
+        {
+          "_id": 1,
+          "amt": 3.00,
+          "name": "HP"
+        },
+        {
+          "_id": 2,
+          "amt": 6.00,
+          "name": "SN"
+        }
       ]
     },
 
@@ -16,7 +25,16 @@ var initialData = {
       "num": "1237-3",
       "amtdue": 12.50,
       "validationarr": [
-        1,4
+        {
+          "_id": 2,
+          "amt": 6.00,
+          "name": "SN"
+        },
+        {
+          "_id": 5,
+          "amt": 8.00,
+          "name": "dead"
+        }
       ]
     },
 
@@ -25,7 +43,11 @@ var initialData = {
       "num": "1936-3",
       "amtdue": 20.00,
       "validationarr": [
-        2
+        {
+          "_id": 5,
+          "amt": 8.00,
+          "name": "dead"
+        }
       ]
     },
 
@@ -34,7 +56,11 @@ var initialData = {
       "num": "1896-3",
       "amtdue": 15.50,
       "validationarr": [
-        5
+        {
+          "_id": 4,
+          "amt": 7.00,
+          "name": "BD"
+        }
       ]
     },
 
@@ -43,40 +69,17 @@ var initialData = {
       "num": "1235-3",
       "amtdue": 8.50,
       "validationarr": [
-
+        {
+          "_id": 4,
+          "amt": 7.00,
+          "name": "BD"
+        },
+        {
+          "_id": 1,
+          "amt": 3.00,
+          "name": "HP"
+        }
       ]
-    }
-  },
-
-  "validations": {
-    "1": {
-      "_id": 1,
-      "amt": 3.00,
-      "name": "HP"
-    },
-
-    "2": {
-      "_id": 2,
-      "amt": 6.00,
-      "name": "SN"
-    },
-
-    "3": {
-      "_id": 3,
-      "amt": 4.00,
-      "name": "HC"
-    },
-
-    "4": {
-      "_id": 4,
-      "amt": 7.00,
-      "name": "BD"
-    },
-
-    "5": {
-      "_id": 5,
-      "amt": 8.00,
-      "name": "dead"
     }
   }
 };
