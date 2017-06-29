@@ -4,8 +4,10 @@ export default class Leftsidebar extends React.Component {
 
 constructor(props){
   super(props);
+  this.handleChange = this.handleChange.bind(this);
+  this.handleReturn = this.handleReturn.bind(this);
   this.state={
-    value: this.props.val
+    ticketid: this.props.ticketid
   };
 }
 
@@ -17,9 +19,18 @@ constructor(props){
   handleChange(e){
     //e.preventDefault();
 
-      this.setState({value: e.target.value});
+      //this.setState({ticket: e.target.value});
+      this.props.onTicketChange(e.target.value);
 
+  }
 
+  handleReturn(e){
+
+    if(e.key === 'Enter'){
+      e.preventDefault();
+
+    this.props.onTicketReturn(e);
+  }
   }
 
 
@@ -30,8 +41,9 @@ constructor(props){
 
       <div className="row-fluid scanbox">
         <form>
-          <input type="text" placeholder="Scan Ticket" value={this.state.value} onChange={(e) => this.handleChange(e)} onKeyDown={(e) => this.props.onKeyDown(e)} />
+          <input type="text" placeholder="Scan Ticket" value={this.props.ticketid} onChange={this.handleChange} onKeyDown={this.handleReturn} />
         </form>
+
       </div>
       <div className="row-fluid scanimg">
         <div className="col-md-3">
