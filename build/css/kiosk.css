@@ -10,16 +10,29 @@ html, body {
   height: 100%;
   width: 100%;
 }
+
+
+#maingrid > div{
+  height: 100%;
+  width: 100%;
+}
+
+
 .modal-container {
   position: relative;
+
 }
 .modal-container .modal, .modal-container .modal-backdrop {
   position: absolute;
 }
 
-#maingrid > div{
-  height: 100%;
-  width: 100%;
+.example-appear {
+  opacity: 0.01;
+}
+
+.example-appear.example-appear-active {
+  opacity: 1;
+  transition: opacity .5s ease-in;
 }
 
 #navbar{

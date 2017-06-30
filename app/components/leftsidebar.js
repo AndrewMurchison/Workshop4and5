@@ -4,7 +4,6 @@ export default class Leftsidebar extends React.Component {
 
 constructor(props){
   super(props);
-  this.handleChange = this.handleChange.bind(this);
   this.handleReturn = this.handleReturn.bind(this);
   this.state={
     ticketid: this.props.ticketid
@@ -19,8 +18,8 @@ constructor(props){
   handleChange(e){
     //e.preventDefault();
 
-      //this.setState({ticket: e.target.value});
-      this.props.onTicketChange(e.target.value);
+      this.setState({ticketid: e.target.value});
+      //this.props.onTicketChange(e.target.value);
 
   }
 

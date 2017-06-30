@@ -8,7 +8,7 @@ export default class Content extends React.Component {
 
   constructor(props){
     super(props);
-    this.handleTicketChange = this.handleTicketChange.bind(this);
+    //this.handleTicketChange = this.handleTicketChange.bind(this);
     this.handleTicketReturn = this.handleTicketReturn.bind(this);
     this.state = {
       ticketid: "",
@@ -17,31 +17,35 @@ export default class Content extends React.Component {
     };
   }
 
-  handleTicketChange(ticketid){
-    this.setState({ticketid});
-  }
+
+
 
   handleTicketReturn(ticketid){
     ticketid.preventDefault();
     getTicketInfo(ticketid.target.value, (fd)=>{
       this.setState({ticketnum: fd});
     });
-    var modal = this.state.modalToggle;
-    this.setState({modalToggle: !modal})
+
+    this.setState({modalToggle: true})
+
 
   }
+
+
 
 
   render() {
 
     return (
       <div id="Content" className="row-fluid">
-       <ModalBox modalToggle={this.state.modalToggle} />
-      <Leftsidebar ticketid={this.state.ticketid} onTicketReturn={this.handleTicketReturn}  onTicketChange={this.handleTicketChange} />
+
+        <ModalBox title="Ticket Scanned" modalToggle={this.state.modalToggle} />
+      <Leftsidebar ticketid={this.state.ticketid} onTicketReturn={this.handleTicketReturn} />
 
       <Ticketinfo ticketnum={this.state.ticketnum} ticketid={this.state.ticketid} />
       <Rightsidebar />
       </div>
     );
+
   }
 }

@@ -24,6 +24,7 @@
     "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
+    "react-addons-css-transition-group": "^15.6.0",
     "react-bootstrap-validation": "^0.1.11",
     "react-modal": "^2.2.0"
   }
