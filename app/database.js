@@ -33,7 +33,7 @@ var initialData = {
         {
           "_id": 5,
           "amt": 8.00,
-          "name": "dead"
+          "name": "DA"
         }
       ]
     },
@@ -46,7 +46,7 @@ var initialData = {
         {
           "_id": 5,
           "amt": 8.00,
-          "name": "dead"
+          "name": "NF"
         }
       ]
     },

@@ -6,8 +6,9 @@ constructor(props){
   super(props);
   this.handleReturn = this.handleReturn.bind(this);
   this.state={
-    ticketid: ""
+    ticketid: this.props.ticketid
   };
+  this.handleChange = this.handleChange.bind(this);
 }
 
 
@@ -15,11 +16,11 @@ constructor(props){
 
 
   handleChange(e){
-    e.preventDefault();
-      
+
+
       this.setState({ticketid: e.target.value});
       //this.props.onTicketChange(e.target.value);
-
+     //e.preventDefault();
   }
 
   handleReturn(e){
@@ -39,7 +40,7 @@ constructor(props){
 
       <div className="row-fluid scanbox">
         <form>
-          <input type="text" placeholder="Scan Ticket" value={this.props.ticketid} onChange={this.handleChange} onKeyDown={this.handleReturn} />
+          <input type="text" placeholder="Scan Ticket" value={this.state.ticketid} onChange={this.handleChange} onKeyDown={this.handleReturn} />
         </form>
 
       </div>

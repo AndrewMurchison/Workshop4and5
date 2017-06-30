@@ -22,8 +22,8 @@ componentWillReceiveProps(nextProps) {
 var data = this.state.ticketnum;
 
 
-if(data != null){
-  
+if(data != null && data.validationarr != undefined){
+
   return (
     <div id="middle" className="col-md-6">
 
@@ -47,7 +47,7 @@ if(data != null){
             data.validationarr.map((nm)=>{
               return(
 
-                <Validations validate={nm.name} />
+                <Validations key={nm._id} validate={nm.name} />
 
 
               );
