@@ -6,7 +6,7 @@ constructor(props){
   super(props);
   this.handleReturn = this.handleReturn.bind(this);
   this.state={
-    ticketid: this.props.ticketid
+    ticketid: ""
   };
 }
 
@@ -14,10 +14,9 @@ constructor(props){
 
 
 
-
   handleChange(e){
-    //e.preventDefault();
-
+    e.preventDefault();
+      
       this.setState({ticketid: e.target.value});
       //this.props.onTicketChange(e.target.value);
 

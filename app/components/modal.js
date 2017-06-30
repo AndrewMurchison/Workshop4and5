@@ -27,6 +27,18 @@ componentWillReceiveProps(nextProps) {
 
 
   render() {
+    var title;
+    var Message;
+    switch(this.props.modalMessage){
+      case 1:
+        title = "Scanning Ticket";
+        Message = "Please wait while the system processes your valet ticket.";
+        break;
+      case 2:
+        title = "Invalid Scan";
+        Message = "Please scan a valid ticket";
+        break;
+    }
 
       return(
     <ReactCSSTransitionGroup
@@ -44,10 +56,10 @@ componentWillReceiveProps(nextProps) {
 
         >
           <Modal.Header>
-            <Modal.Title id="contained-modal-title">Ticket Scanning</Modal.Title>
+            <Modal.Title id="contained-modal-title">{title}</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            Elit est explicabo ipsum eaque dolorem blanditiis doloribus sed id ipsam, beatae, rem fuga id earum? Inventore et facilis obcaecati.
+            {Message}
           </Modal.Body>
           <Modal.Footer>
 

@@ -13,7 +13,8 @@ export default class Content extends React.Component {
     this.state = {
       ticketid: "",
       ticketnum: "",
-      modalToggle: false
+      modalToggle: false,
+      modalMessage: null
     };
   }
 
@@ -23,8 +24,16 @@ export default class Content extends React.Component {
   handleTicketReturn(ticketid){
     ticketid.preventDefault();
     getTicketInfo(ticketid.target.value, (fd)=>{
-      this.setState({ticketnum: fd});
+      this.setState({ticketnum: fd}, ()=>{
+        if(this.state.ticketnum == null){
+          this.setState({modalMessage: 2});
+        }
+        else{
+          this.setState({modalMessage: 1});
+        }
+      });
     });
+
 
     this.setState({modalToggle: true})
 
@@ -39,7 +48,7 @@ export default class Content extends React.Component {
     return (
       <div id="Content" className="row-fluid">
 
-        <ModalBox title="Ticket Scanned" modalToggle={this.state.modalToggle} />
+        <ModalBox title="Ticket Scanned" modalToggle={this.state.modalToggle} modalMessage={this.state.modalMessage} />
       <Leftsidebar ticketid={this.state.ticketid} onTicketReturn={this.handleTicketReturn} />
 
       <Ticketinfo ticketnum={this.state.ticketnum} ticketid={this.state.ticketid} />

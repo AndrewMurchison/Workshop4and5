@@ -11,8 +11,16 @@ function emulateServerReturn(data, cb) {
 }
 
 function getTicketInfoSync(ticketInfoId){
-  var ticketInfo = readDocument('ticketInfo', ticketInfoId);
-  //ticketInfo.validationarr = ticketInfo.validationarr.map((id)=> readDocument('validations', id));
+var ticketInfo;
+try{
+  ticketInfo = readDocument('ticketInfo', ticketInfoId);
+
+}
+catch(e){
+  ticketInfo = null;
+}
+
+
   //ticketInfo.num = readDocument('ticketInfo', ticketInfo.num);
   //ticketInfo.amtdue = readDocument('ticketInfo', ticketInfo.amtdue);
 
