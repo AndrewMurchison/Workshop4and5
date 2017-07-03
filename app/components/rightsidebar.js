@@ -1,14 +1,38 @@
 import React from 'react';
 
+
 export default class Rightsidebar extends React.Component {
+
+  constructor(props){
+    super(props);
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick(e){
+    this.props.onClick(e);
+
+  }
+
+
+
   render() {
+    var opacity ={
+      opacity: "1"
+    };
+    if(this.props.payToggle){
+      opacity ={
+        opacity: "0.5"
+      };
+    }
+
+
     return (
       <div id="rightsidebar" className="col-md-3">
         <div className="row-fluid helploc">
           <div>
 
 
-          <button>
+          <button onClick={this.handleClick}>
               Help
               <br />
               Click for Assistance
@@ -26,10 +50,10 @@ export default class Rightsidebar extends React.Component {
 
           <div className="row-fluid paymenttype">
 
-            <button data-toggle="modal" >Credit/Debit</button>
+            <button className="credit" style={opacity} disabled={this.props.payToggle} onClick={this.handleClick}>Credit/Debit</button>
 
 
-            <button className="cash">Cash Payments</button>
+            <button className="cash" style={opacity}  disabled={this.props.payToggle} onClick={this.handleClick}>Cash Payments</button>
 
           </div>
         </div>

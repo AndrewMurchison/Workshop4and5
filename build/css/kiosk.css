@@ -21,9 +21,18 @@ html, body {
 .modal-container {
   position: relative;
 
+
+
 }
 .modal-container .modal, .modal-container .modal-backdrop {
   position: absolute;
+}
+.amtdue{
+  border-bottom: 1px solid lightgray;
+}
+
+.footer{
+  border: none;
 }
 
 .example-appear {
@@ -33,6 +42,10 @@ html, body {
 .example-appear.example-appear-active {
   opacity: 1;
   transition: opacity .5s ease-in;
+}
+
+.paymodal video{
+  height: 200px;
 }
 
 #navbar{
@@ -222,6 +235,7 @@ html, body {
 .helploc button {
   width: 100%;
   height: 100%;
+
 
 
 }
