@@ -104,7 +104,7 @@ export default class Content extends React.Component {
       setTimeout(() => {
         this.setState({modalToggle: false})
       }, 3000);
-      this.nameInput.placeholder = "Scan Ticket";
+
     } else {
       this.setState({modalToggle: false});
     }
@@ -112,6 +112,7 @@ export default class Content extends React.Component {
   }
 
   homescreen(){
+    this.nameInput.placeholder = "Scan Ticket";
     this.setState({payToggle: true});
     this.setState({ticketnum: null});
     this.setState({valid: []});
