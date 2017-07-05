@@ -57,6 +57,10 @@ export default class Rightsidebar extends React.Component {
             <button className="cash" style={opacity}  disabled={this.props.payToggle} onClick={this.handleClick}>Cash Payments</button>
 
           </div>
+
+          <div className="row-fluid canceltransaction">
+          <button className="canceltransaction" style={opacity} disabled={this.props.payToggle} onClick={this.handleClick}>Cancel Transaction</button>
+          </div>
         </div>
         </div>
     );

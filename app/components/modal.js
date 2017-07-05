@@ -69,6 +69,10 @@ closeModal(e){
         title = "Scanning Validation";
         content = "Please wait while the system processes your validation.";
         break;
+      case 8:
+        title = "Transaction Canceled";
+        content = "Your transaction was canceled. Returning to welcome screen.";
+        break;
     }
 
       return(

@@ -222,6 +222,7 @@ html, body {
 
 #rightsidebar {
   height: 100%;
+
   font-size: 1vw;
 }
 
@@ -234,20 +235,39 @@ html, body {
 .helploc div{
   width: 100%;
   height: 40%;
-  border: 6px solid #a8cbd6;
+
 
 }
 .helploc button {
   width: 100%;
   height: 100%;
-
+  border: 6px solid #a8cbd6;
 
 
 }
 
 .paymentloc {
   height: 70%;
+
+  width: 100%;
+  position: relative;
+
 }
+
+.canceltransaction{
+  height: 12.9%;
+  width: 100%;
+
+  position: absolute;
+  bottom: 10%;
+}
+
+.canceltransaction > button{
+  height: 100%;
+  width: 100%;
+  border: 6px solid #a8cbd6;
+}
+
 
 .paymentopt {
   height: 20%;
@@ -268,11 +288,16 @@ html, body {
 .paymenttype {
   height: 12.9%;
   margin-top: 20px;
-  border: 6px solid #a8cbd6;
+
 }
 
-.paymentloc button {
+.paymenttype button {
   width: 50%;
   height: 100%;
   float: left;
+  border: 6px solid #a8cbd6;
+}
+
+button:hover{
+  background-color: #f2f2f2;
 }

@@ -76,10 +76,17 @@ export default class Content extends React.Component {
     if (e.target.className == "credit") {
       this.setState({modalMessage: 4});
       this.setState({modalToggle: true});
-    } else if (e.target.className == "cash") {
+    }
+    else if (e.target.className == "cash") {
       this.setState({modalMessage: 5});
       this.setState({modalToggle: true});
-    } else {
+    }
+    else if(e.target.className == "canceltransaction"){
+      this.homescreen();
+      this.setState({modalMessage: 8});
+      this.setState({modalToggle: true});
+    }
+    else {
       this.setState({modalMessage: 3});
       this.setState({modalToggle: true});
     }
@@ -92,12 +99,7 @@ export default class Content extends React.Component {
 
     //this.setState({payToggle: true});
     if (e.target.className == "finish") {
-      this.setState({payToggle: true});
-      this.setState({ticketnum: null});
-      this.setState({valid: []});
-      this.setState({scanimg: "/img/scanTicket.png"});
-      this.setState({navmsg: "Please Scan your Valet Ticket"});
-      this.setState({instr: "Move the ticket so the scanner light can read the bar code:"});
+      this.homescreen();
       this.setState({modalMessage: 6});
       setTimeout(() => {
         this.setState({modalToggle: false})
@@ -107,6 +109,15 @@ export default class Content extends React.Component {
       this.setState({modalToggle: false});
     }
     this.nameInput.focus();
+  }
+
+  homescreen(){
+    this.setState({payToggle: true});
+    this.setState({ticketnum: null});
+    this.setState({valid: []});
+    this.setState({scanimg: "/img/scanTicket.png"});
+    this.setState({navmsg: "Please Scan your Valet Ticket"});
+    this.setState({instr: "Move the ticket so the scanner light can read the bar code:"});
   }
 
   render() {
