@@ -6,6 +6,7 @@ import {readDocument} from './database.js';
  */
 function emulateServerReturn(data, cb) {
   setTimeout(() => {
+
     cb(data);
   }, 4);
 }
@@ -19,14 +20,9 @@ try{
 catch(e){
   ticketInfo = null;
 }
-
-
-  //ticketInfo.num = readDocument('ticketInfo', ticketInfo.num);
-  //ticketInfo.amtdue = readDocument('ticketInfo', ticketInfo.amtdue);
-
-
   return ticketInfo;
 }
+
 
 export function getTicketInfo(num, cb){
   var ticketInfo = getTicketInfoSync(num);

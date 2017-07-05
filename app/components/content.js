@@ -14,30 +14,42 @@ export default class Content extends React.Component {
     this.closeModal = this.closeModal.bind(this);
     this.state = {
       ticketid: "",
-      ticketnum: "",
+      ticketnum: null,
       modalToggle: false,
       modalMessage: null,
-      payToggle: true
+      payToggle: true,
+      valid: []
     };
+
+
   }
-
-
 
 
   handleTicketReturn(ticketid){
     ticketid.preventDefault();
-    getTicketInfo(ticketid.target.value, (fd)=>{
-      this.setState({ticketnum: fd}, ()=>{
-        if(this.state.ticketnum == null){
-          this.setState({modalMessage: 2});
-          this.setState({payToggle: true});
-        }
-        else{
-          this.setState({modalMessage: 1});
-          this.setState({payToggle: false});
-        }
+    if(this.state.ticketnum == null){
+      getTicketInfo(ticketid.target.value, (fd)=>{
+        this.setState({ticketnum: fd}, ()=>{
+          if(this.state.ticketnum == null){
+            this.setState({modalMessage: 2});
+            this.setState({payToggle: true});
+          }
+          else{
+            this.setState({modalMessage: 1});
+            this.setState({payToggle: false});
+          }
+        });
       });
-    });
+    }
+    else{
+
+      var arrayvar = this.state.valid.slice();
+      arrayvar.push(ticketid.target.value);
+      this.setState({ valid: arrayvar });
+      
+
+    }
+
 
 
     this.setState({modalToggle: true});
@@ -47,6 +59,7 @@ export default class Content extends React.Component {
 
   handleClick(e){
     e.preventDefault();
+
     if(e.target.className == "credit"){
       this.setState({modalMessage: 4});
       this.setState({modalToggle: true});
@@ -84,7 +97,7 @@ export default class Content extends React.Component {
         <ModalBox title="Ticket Scanned" ticketnum={this.state.ticketnum} onClick={this.closeModal} modalToggle={this.state.modalToggle} modalMessage={this.state.modalMessage} />
       <Leftsidebar ticketid={this.state.ticketid} onTicketReturn={this.handleTicketReturn} />
 
-      <Ticketinfo ticketnum={this.state.ticketnum} ticketid={this.state.ticketid} />
+      <Ticketinfo valid={this.state.valid} ticketnum={this.state.ticketnum} ticketid={this.state.ticketid} />
       <Rightsidebar onClick={this.handleClick} payToggle={this.state.payToggle} />
       </div>
     );

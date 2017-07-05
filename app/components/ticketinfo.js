@@ -6,21 +6,24 @@ constructor(props){
   super(props);
   this.state={
     ticketnum: null,
-    ticketid: this.props.ticketid
+    ticketid: this.props.ticketid,
+    valid: this.props.valid
   };
 }
 componentDidMount(){
   this.setState({ticketnum: this.props.ticketnum})
+  this.setState({valid: this.props.valid})
 }
 
 componentWillReceiveProps(nextProps) {
   this.setState({ticketnum: nextProps.ticketnum});
+  this.setState({valid: nextProps.valid})
+
 }
 
   render() {
 
 var data = this.state.ticketnum;
-
 
 if(data != null && data.validationarr != undefined){
 
@@ -43,11 +46,13 @@ if(data != null && data.validationarr != undefined){
           <span className="alignrt">Validations:</span>
         </div>
         <div className="col-md-6">
+
           {
-            data.validationarr.map((nm)=>{
+
+            this.state.valid.map((nm, index)=>{
               return(
 
-                <Validations key={nm._id} validate={nm.name} />
+                <Validations key={index} validate={nm} />
 
 
               );
