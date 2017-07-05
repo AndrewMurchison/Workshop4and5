@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Container from './components/container.js';
+import Content from './components/content.js';
 
 
 
 
 
 ReactDOM.render(
-  <Container />,
+  <Content />,
   document.getElementById('maingrid')
 
   );

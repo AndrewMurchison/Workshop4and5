@@ -78,8 +78,8 @@ if(data != null){
     <div id="scanvideo" className="row-fluid">
     <div className="row-fluid instructions">
       Bar Code Faces Up
-      <br /> Move the ticket so the scanner
-      <br /> light can read the bar code:
+      <br />
+      {this.props.instr}
     </div>
     <div className="videocont row-fluid">
         <video loop autoPlay>
@@ -104,8 +104,8 @@ else{
       <div id="scanvideo" className="row-fluid">
       <div className="row-fluid instructions">
         Bar Code Faces Up
-        <br /> Move the ticket so the scanner
-        <br /> light can read the bar code:
+        <br />
+        {this.props.instr}
       </div>
       <div className="videocont row-fluid">
           <video loop autoPlay>

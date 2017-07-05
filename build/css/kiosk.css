@@ -96,10 +96,15 @@ html, body {
 
 .scan{
   height: 100%;
+  width: 50%;
 
-  background-image: url("/img/scanTicket.png");
-  background-size: cover;
-  border: 6px solid #a8cbd6;
+  overflow: hidden;
+
+}
+.scan > img{
+   width: 100%;
+   height: 100%;
+   border: 6px solid #a8cbd6;
 }
 
 .scanbox {

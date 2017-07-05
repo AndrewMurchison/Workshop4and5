@@ -21,7 +21,7 @@ componentDidMount(){
 componentWillReceiveProps(nextProps) {
   this.setState({ticketnum: nextProps.ticketnum});
   this.setState({ticketid: nextProps.ticketid})
-  
+
 
 }
 
@@ -48,6 +48,7 @@ componentWillReceiveProps(nextProps) {
 
 
   render() {
+
     return (
       <div id="leftsidebar" className="col-md-3">
 
@@ -62,7 +63,7 @@ componentWillReceiveProps(nextProps) {
         <div className="col-md-3">
         </div>
         <div className="scan col-md-6">
-            {this.state.value}
+            <img src={this.props.scanimg} />
         </div>
         <div className="col-md-3">
         </div>

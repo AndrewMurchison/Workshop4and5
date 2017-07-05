@@ -36,7 +36,7 @@ export default class Navbar extends React.Component {
       </div>
       <div className="welcometxt col-md-4">
         Welcome
-        <br /> Please Scan your Valet Ticket
+        <br /> {this.props.navmsg}
         <br /> {this.state.curTime}
       </div>
       <div className="col-md-4">
