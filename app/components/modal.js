@@ -12,7 +12,7 @@ constructor(props){
 }
 
 componentWillReceiveProps(nextProps) {
-  if(nextProps.modalMessage > 3){
+  if(nextProps.modalMessage == 4 || nextProps.modalMessage == 5){
     this.setState({show: nextProps.modalToggle});
   }
   else{
@@ -60,6 +60,14 @@ closeModal(e){
       case 5:
         title = "Payment Screen";
         content = <Payment ticketnum={this.props.ticketnum} onClick={this.closeModal} payMsg={this.props.modalMessage} />;
+        break;
+      case 6:
+        title = "Car has been requested";
+        content = "Your car is being brought to this entrance. Drive safely.";
+        break;
+      case 7:
+        title = "Scanning Validation";
+        content = "Please wait while the system processes your validation.";
         break;
     }
 

@@ -6,11 +6,24 @@ constructor(props){
   super(props);
   this.handleReturn = this.handleReturn.bind(this);
   this.state={
-    ticketid: this.props.ticketid
+    ticketid: this.props.ticketid,
+    ticketnum: this.props.ticketnum
   };
   this.handleChange = this.handleChange.bind(this);
 }
 
+componentDidMount(){
+  this.setState({ticketnum: this.props.ticketnum});
+  this.setState({ticketid: this.props.ticketid});
+
+}
+
+componentWillReceiveProps(nextProps) {
+  this.setState({ticketnum: nextProps.ticketnum});
+  this.setState({ticketid: nextProps.ticketid})
+  
+
+}
 
 
 
@@ -29,6 +42,7 @@ constructor(props){
       e.preventDefault();
 
     this.props.onTicketReturn(e);
+
   }
   }
 
@@ -40,7 +54,7 @@ constructor(props){
 
       <div className="row-fluid scanbox">
         <form>
-          <input type="text" placeholder="Scan Ticket" value={this.state.ticketid} onChange={this.handleChange} onKeyDown={this.handleReturn} />
+          <input ref={this.props.inputRef} type="text" placeholder="Scan Ticket" onChange={this.handleChange} onKeyDown={this.handleReturn} />
         </form>
 
       </div>

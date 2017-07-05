@@ -9,6 +9,7 @@ export default class Rightsidebar extends React.Component {
   }
 
   handleClick(e){
+    e.preventDefault();
     this.props.onClick(e);
 
   }

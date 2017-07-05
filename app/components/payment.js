@@ -9,6 +9,7 @@ export default class Payment extends React.Component {
 
   closeModal(e){
     e.preventDefault();
+    
     this.props.onClick(e);
   }
 

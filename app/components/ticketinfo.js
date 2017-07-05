@@ -24,8 +24,11 @@ componentWillReceiveProps(nextProps) {
   render() {
 
 var data = this.state.ticketnum;
-
-if(data != null && data.validationarr != undefined){
+var validarr = [""];
+if(this.state.valid.length > 0){
+  validarr = this.state.valid
+}
+if(data != null){
 
   return (
     <div id="middle" className="col-md-6">
@@ -49,7 +52,7 @@ if(data != null && data.validationarr != undefined){
 
           {
 
-            this.state.valid.map((nm, index)=>{
+            validarr.map((nm, index)=>{
               return(
 
                 <Validations key={index} validate={nm} />

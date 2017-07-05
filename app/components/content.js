@@ -23,35 +23,47 @@ export default class Content extends React.Component {
 
 
   }
+  componentDidMount(){
+    this.nameInput.focus();
+  }
 
 
   handleTicketReturn(ticketid){
     ticketid.preventDefault();
+
     if(this.state.ticketnum == null){
+
       getTicketInfo(ticketid.target.value, (fd)=>{
         this.setState({ticketnum: fd}, ()=>{
           if(this.state.ticketnum == null){
+
             this.setState({modalMessage: 2});
             this.setState({payToggle: true});
           }
           else{
+
+            this.nameInput.placeholder = "Scan Validation";
             this.setState({modalMessage: 1});
             this.setState({payToggle: false});
+
           }
         });
       });
+
+
     }
     else{
+      this.setState({modalMessage: 7});
 
       var arrayvar = this.state.valid.slice();
       arrayvar.push(ticketid.target.value);
       this.setState({ valid: arrayvar });
-      
+
 
     }
 
 
-
+   this.nameInput.value ="";
     this.setState({modalToggle: true});
 
 
@@ -72,18 +84,30 @@ export default class Content extends React.Component {
       this.setState({modalMessage: 3});
       this.setState({modalToggle: true});
    }
+   this.nameInput.focus();
 
   }
 
   closeModal(e){
     e.preventDefault();
-    this.setState({modalToggle: false});
+
     //this.setState({payToggle: true});
     if(e.target.className == "finish"){
       this.setState({payToggle: true});
       this.setState({ticketnum: null});
-    }
+      this.setState({valid: []});
 
+      this.setState({modalMessage: 6});
+      setTimeout(
+        () => { this.setState({modalToggle: false})},
+        3000
+      );
+      this.nameInput.placeholder = "Scan Ticket";
+    }
+    else{
+      this.setState({modalToggle: false});
+    }
+    this.nameInput.focus();
   }
 
 
@@ -95,7 +119,7 @@ export default class Content extends React.Component {
       <div id="Content" className="row-fluid">
 
         <ModalBox title="Ticket Scanned" ticketnum={this.state.ticketnum} onClick={this.closeModal} modalToggle={this.state.modalToggle} modalMessage={this.state.modalMessage} />
-      <Leftsidebar ticketid={this.state.ticketid} onTicketReturn={this.handleTicketReturn} />
+      <Leftsidebar inputRef={(input) => { this.nameInput = input; }} ticketnum={this.state.ticketnum} ticketid={this.state.ticketid} onTicketReturn={this.handleTicketReturn} />
 
       <Ticketinfo valid={this.state.valid} ticketnum={this.state.ticketnum} ticketid={this.state.ticketid} />
       <Rightsidebar onClick={this.handleClick} payToggle={this.state.payToggle} />
