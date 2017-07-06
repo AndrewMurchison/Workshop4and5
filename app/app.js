@@ -11,18 +11,14 @@ class GridContent extends React.Component{
     this.onMove = this.onMove.bind(this);
     this.contentMove = this.contentMove.bind(this);
     this.state={
-      display: "welcome",
-      curTime: new Date().toLocaleString()
+      display: "welcome"
     };
 
   }
   componentDidMount(){
-    timer = setTimeout(()=>{this.setState({display: "welcome"})}, 5000);
-    setInterval( () => {
-      this.setState({
-        curTime : new Date().toLocaleString()
-      })
-    },1000)
+    timer = setTimeout(()=>{this.setState({display: "welcome"})}, 120000);
+
+
   }
 
   onMove(){
@@ -58,7 +54,7 @@ class GridContent extends React.Component{
       else{
         return(
           <div onClick={this.contentMove} onKeyDown={this.contentMove} onMouseMove={this.contentMove}>
-          <Content timedisp={this.state.curTime} />
+          <Content />
           </div>
         );
       }
