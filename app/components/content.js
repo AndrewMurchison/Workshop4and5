@@ -18,10 +18,6 @@ export default class Content extends React.Component {
       ticketnum: null,
       modalToggle: false,
       modalMessage: null,
-      payToggle: true,
-      scanimg: "/img/scanTicket.png",
-      navmsg: "Please Scan your Valet Ticket",
-      instr: "Move the ticket so the scanner light can read the bar code:",
       valid: []
     };
 
@@ -43,15 +39,11 @@ export default class Content extends React.Component {
           if (this.state.ticketnum == null) {
 
             this.setState({modalMessage: 2});
-            this.setState({payToggle: true});
           } else {
 
             this.nameInput.placeholder = "Scan Validation";
             this.setState({modalMessage: 1});
-            this.setState({payToggle: false});
-            this.setState({scanimg: "/img/scanValidation.png"});
-            this.setState({navmsg: "Scan Validations or Pick a Payment Option"});
-            this.setState({instr: "If you have any validations then please scan them as shown in the video or proceed to payment options shown on the right:"});
+
           }
         });
       });
@@ -96,8 +88,6 @@ export default class Content extends React.Component {
 
   closeModal(e) {
     e.preventDefault();
-
-    //this.setState({payToggle: true});
     if (e.target.className == "finish") {
       this.homescreen();
       this.setState({modalMessage: 6});
@@ -113,28 +103,26 @@ export default class Content extends React.Component {
 
   homescreen(){
     this.nameInput.placeholder = "Scan Ticket";
-    this.setState({payToggle: true});
     this.setState({ticketnum: null});
     this.setState({valid: []});
-    this.setState({scanimg: "/img/scanTicket.png"});
-    this.setState({navmsg: "Please Scan your Valet Ticket"});
-    this.setState({instr: "Move the ticket so the scanner light can read the bar code:"});
+
+
   }
 
   render() {
 
     return (
       <div>
-        <Navbar navmsg={this.state.navmsg} />
+        <Navbar ticketnum={this.state.ticketnum} />
         <div id="Content" className="row-fluid">
 
           <ModalBox title="Ticket Scanned" ticketnum={this.state.ticketnum} onClick={this.closeModal} modalToggle={this.state.modalToggle} modalMessage={this.state.modalMessage}/>
           <Leftsidebar inputRef={(input) => {
             this.nameInput = input;
-          }} ticketnum={this.state.ticketnum} ticketid={this.state.ticketid} onTicketReturn={this.handleTicketReturn} scanimg={this.state.scanimg} />
+          }} ticketnum={this.state.ticketnum} ticketid={this.state.ticketid} onTicketReturn={this.handleTicketReturn} />
 
-        <Ticketinfo instr={this.state.instr} valid={this.state.valid} ticketnum={this.state.ticketnum} ticketid={this.state.ticketid}/>
-          <Rightsidebar onClick={this.handleClick} payToggle={this.state.payToggle}/>
+        <Ticketinfo valid={this.state.valid} ticketnum={this.state.ticketnum} ticketid={this.state.ticketid}/>
+          <Rightsidebar onClick={this.handleClick} ticketnum={this.state.ticketnum}/>
         </div>
       </div>
     );

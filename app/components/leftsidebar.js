@@ -48,6 +48,10 @@ componentWillReceiveProps(nextProps) {
 
 
   render() {
+    var img = "/img/scanTicket.png";
+    if(this.state.ticketnum != null){
+      img = "/img/scanValidation.png";
+    }
 
     return (
       <div id="leftsidebar" className="col-md-3">
@@ -63,7 +67,7 @@ componentWillReceiveProps(nextProps) {
         <div className="col-md-3">
         </div>
         <div className="scan col-md-6">
-            <img src={this.props.scanimg} />
+            <img src={img} />
         </div>
         <div className="col-md-3">
         </div>

@@ -28,6 +28,7 @@ var validarr = [""];
 if(this.state.valid.length > 0){
   validarr = this.state.valid
 }
+
 if(data != null){
 
   return (
@@ -79,7 +80,7 @@ if(data != null){
     <div className="row-fluid instructions">
       Bar Code Faces Up
       <br />
-      {this.props.instr}
+      If you have any validations then please scan them as shown in the video or proceed to payment options shown on the right:
     </div>
     <div className="videocont row-fluid">
         <video loop autoPlay>
@@ -105,7 +106,7 @@ else{
       <div className="row-fluid instructions">
         Bar Code Faces Up
         <br />
-        {this.props.instr}
+        Move the ticket so the scanner light can read the bar code:
       </div>
       <div className="videocont row-fluid">
           <video loop autoPlay>

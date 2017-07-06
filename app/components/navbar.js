@@ -18,7 +18,10 @@ export default class Navbar extends React.Component {
   }
 
   render() {
-
+    var msg = "Please Scan your Valet Ticket";
+    if(this.props.ticketnum != null){
+      msg = "Scan Validations or Pick a Payment Option";
+    }
 
 
 
@@ -36,7 +39,7 @@ export default class Navbar extends React.Component {
       </div>
       <div className="welcometxt col-md-4">
         Welcome
-        <br /> {this.props.navmsg}
+        <br /> {msg}
         <br /> {this.state.curTime}
       </div>
       <div className="col-md-4">

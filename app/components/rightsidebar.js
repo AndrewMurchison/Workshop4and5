@@ -20,7 +20,7 @@ export default class Rightsidebar extends React.Component {
     var opacity ={
       opacity: "1"
     };
-    if(this.props.payToggle){
+    if(this.props.ticketnum == null){
       opacity ={
         opacity: "0.5"
       };
