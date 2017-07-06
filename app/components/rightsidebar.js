@@ -20,10 +20,12 @@ export default class Rightsidebar extends React.Component {
     var opacity ={
       opacity: "1"
     };
+    var disabled = false;
     if(this.props.ticketnum == null){
       opacity ={
         opacity: "0.5"
       };
+      disabled = true;
     }
 
 
@@ -51,15 +53,15 @@ export default class Rightsidebar extends React.Component {
 
           <div className="row-fluid paymenttype">
 
-            <button className="credit" style={opacity} disabled={this.props.payToggle} onClick={this.handleClick}>Credit/Debit</button>
+            <button className="credit" style={opacity} disabled={disabled} onClick={this.handleClick}>Credit/Debit</button>
 
 
-            <button className="cash" style={opacity}  disabled={this.props.payToggle} onClick={this.handleClick}>Cash Payments</button>
+            <button className="cash" style={opacity}  disabled={disabled} onClick={this.handleClick}>Cash Payments</button>
 
           </div>
 
           <div className="row-fluid canceltransaction">
-          <button className="canceltransaction" style={opacity} disabled={this.props.payToggle} onClick={this.handleClick}>Cancel Transaction</button>
+          <button className="canceltransaction" style={opacity} disabled={disabled} onClick={this.handleClick}>Cancel Transaction</button>
           </div>
         </div>
         </div>

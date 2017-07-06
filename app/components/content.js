@@ -113,7 +113,7 @@ export default class Content extends React.Component {
 
     return (
       <div>
-        <Navbar ticketnum={this.state.ticketnum} />
+        <Navbar timedisp={this.props.timedisp} ticketnum={this.state.ticketnum} />
         <div id="Content" className="row-fluid">
 
           <ModalBox title="Ticket Scanned" ticketnum={this.state.ticketnum} onClick={this.closeModal} modalToggle={this.state.modalToggle} modalMessage={this.state.modalMessage}/>

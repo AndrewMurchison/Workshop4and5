@@ -4,18 +4,10 @@ export default class Navbar extends React.Component {
 
   constructor(props){
     super(props);
-    this.state={
-      curTime: new Date().toLocaleString()
-    }
+
   }
 
-  componentDidMount() {
-    setInterval( () => {
-      this.setState({
-        curTime : new Date().toLocaleString()
-      })
-    },1000)
-  }
+
 
   render() {
     var msg = "Please Scan your Valet Ticket";
@@ -40,7 +32,7 @@ export default class Navbar extends React.Component {
       <div className="welcometxt col-md-4">
         Welcome
         <br /> {msg}
-        <br /> {this.state.curTime}
+        <br /> {this.props.timedisp}
       </div>
       <div className="col-md-4">
       </div>
