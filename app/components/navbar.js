@@ -41,7 +41,7 @@ export default class Navbar extends React.Component {
 
 
       <div className="col-md-2">
-        <img src="/img/paycelogo.png" />
+      
       </div>
       <div className="col-md-2">
       </div>

@@ -2,13 +2,21 @@ html, body {
   height: 100%;
   padding-top: 10px;
   padding-bottom: 10px;
-  background-color: #FEF6EB;
+
+  background-image: url("/img/bg.jpeg");
+
+      background-repeat:  no-repeat;
+
+      background-size: 100% 100%;
+
   font-family: "Avant Garde", sans-serif;
 }
 
 #maingrid {
   height: 100%;
   width: 100%;
+
+
 }
 
 
@@ -56,9 +64,9 @@ html, body {
 
 #navbar{
   height: 15%;
-  background-color: #96C0CE;
-  border: 6px solid #a8cbd6;
-  border-bottom: none;
+  background: rgba(0,0,0,0.2);
+  color: #f2f2f2;
+
 
 }
 
@@ -72,14 +80,14 @@ html, body {
   height: auto;
   text-align: center;
   font-size: 1.5vw;
-  color: black;
+
 }
 
 #Content {
   height: 85%;
   padding-top: 30px;
-  background-color: #96C0CE;
-  border: 6px solid #a8cbd6;
+
+
 
 }
 
@@ -87,6 +95,7 @@ html, body {
 
 #leftsidebar {
   height: 100%;
+
 
 }
 
@@ -97,6 +106,7 @@ html, body {
 
   padding-top: 20px;
   padding-bottom: 20px;
+
 }
 
 
@@ -110,7 +120,7 @@ html, body {
 .scan > img{
    width: 100%;
    height: 100%;
-   border: 6px solid #a8cbd6;
+   border: 4px solid rgba(0,0,0,0.2);
 }
 
 .scanbox {
@@ -118,6 +128,7 @@ html, body {
   text-align: center;
   padding-top: 30%;
   padding-bottom: 10%;
+
 
 }
 
@@ -128,7 +139,9 @@ html, body {
 .scanbox>form>input {
   font-size: 1.5vw;
   width: 50%;
-  border: 6px solid #a8cbd6;
+
+  color: #f2f2f2;
+  border: 4px solid rgba(0,0,0,0.2);
   text-align: center;
 }
 
@@ -147,8 +160,8 @@ html, body {
   width: 100%;
   margin-bottom: 20px;
 
-  border: 6px solid #a8cbd6;
-  background-color: #bad6de;
+  background: rgba(0,0,0,0.2);
+  color: #f2f2f2;
 
 
 }
@@ -201,8 +214,8 @@ html, body {
   width: 100%;
   position: relative;
   margin-top: 20px;
-  background-color: #bad6de;
-  border: 6px solid #a8cbd6;
+  background: rgba(0,0,0,0.2);
+  color: #f2f2f2;
 }
 
 .videocont>video {
@@ -222,8 +235,9 @@ html, body {
   text-align: center;
   font-size: 1vw;
   overflow: hidden;
-  background-color: #bad6de;
-  border: 6px solid #a8cbd6;
+  background: rgba(0,0,0,0.2);
+  color: #f2f2f2;
+
 }
 
 #rightsidebar {
@@ -247,8 +261,10 @@ html, body {
 .helploc button {
   width: 100%;
   height: 100%;
-  border: 6px solid #a8cbd6;
-
+  background: none;
+  border: 4px solid rgba(0,0,0,0.2);
+  background: rgba(0,0,0,0.2);
+  color: #f2f2f2;
 
 }
 
@@ -271,14 +287,16 @@ html, body {
 .canceltransaction > button{
   height: 100%;
   width: 100%;
-  border: 6px solid #a8cbd6;
+  border: 4px solid rgba(0,0,0,0.2);
+  background: rgba(0,0,0,0.2);
+  color: #f2f2f2;
 }
 
 
 .paymentopt {
   height: 20%;
-  background-color: #bad6de;
-  border: 6px solid #a8cbd6;
+  background: rgba(0,0,0,0.2);
+  color: #f2f2f2;
 
 
   position: relative;
@@ -301,9 +319,14 @@ html, body {
   width: 50%;
   height: 100%;
   float: left;
-  border: 6px solid #a8cbd6;
+  border: 4px solid rgba(0,0,0,0.2);
+  background: rgba(0,0,0,0.2);
+  color: #f2f2f2;
 }
 
+
+
 button:hover{
-  background-color: #f2f2f2;
+  background: rgba(0,0,0,0.4);
+  color: #f2f2f2;
 }
