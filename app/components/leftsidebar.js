@@ -55,7 +55,7 @@ componentWillReceiveProps(nextProps) {
 
     return (
       <div id="leftsidebar" className="col-md-3">
-
+         
 
       <div className="row-fluid scanbox">
         <form>
