@@ -1,26 +1,66 @@
-
+html, body{
+  height: 100%;
+}
 
 #welcome{
   text-align: center;
-  height:
+
 }
 
 #scanbox, #help, #ticketinfo, #paymentopt, #scanimg, #videocont, .inf{
   border: 1px solid black;
 }
 
+#navig{
+  height: 25%;
+}
+
+#navig *{
+  height: 100%;
+}
+
 #maingrid{
   border: 1px solid black;
-  min-height: 100%;
-    height: 100%;
+  height: 75%;
+
+}
+
+#top-row{
+  height: 30%;
+}
+#top-row > div{
+  height: 100%;
+}
+#btm-row{
+  height: 68%;
+}
+
+#btm-row > div{
+  height: 100%;
+}
+#scanimg *{
+  height: 100%;
 }
 
 #scaninp{
   height: 40%;
 }
 
+
+#ticketinfo{
+  position: relative;
+}
+
+#ticketinfo > div{
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+
+
 .htoffset{
-  height: 20px;
+  height: 2%;
 }
 
 .row-eq-height {

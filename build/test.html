@@ -20,66 +20,49 @@
 </head>
 
 <body>
-  <div class="container-fluid">
-    <div class="row-fluid"><img src="./img/paycelogo.png" /></div>
+  <div id=navig class="container-fluid">
+    <div class="row-fluid">
+      <img src="./img/paycelogo.png" />
+    </div>
     <div class="row-fluid">
 
-        <div id="welcome" class="navbar">
-          <div class="navbar-inner">
-          <div class="span2">
+        <div id="welcome">
 
-          </div>
-            <div class="span4 offset2 brand">
-               <h1>Welcome
-                 <br />
-                 <small>
-                   Please Scan your Valet Ticket
-                   <br />
-                   Time
-                 </small>
-               </h1>
-
-
-            </div>
+          <div class="span4 offset4">
+              Welcome
           </div>
         </div>
       </div>
     </div>
 
   <div id="maingrid" class="container-fluid">
-    <div class="row-fluid row-eq-height">
+    <div id="top-row" class="row-fluid row-eq-height">
       <div id="scanbox" class="span3 offset1">
 
          <input id="scaninp" class="align-bottom" type="text" placeholder="Text input">
       </div>
       <div id="ticketinfo" class="span4">
+          <div class="lead">
 
-              <div class="inf span6 lead">
 
-                  <div class="pull-right">Ticket Info:</div>
-                  <br />
-                  <div class="pull-right">Validations:</div>
-                  <br />
-                  <div class="pull-right">Amount Due:</div>
+                  <div>Ticket Info: <span>1235-3</span></div>
 
-              </div>
-              <div class="inf span6">
-                <div class="pull-left lead">
-                1235-3
-                <br />
-                HP
-                <br />
-                $7.00
-              </div>
-              </div>
+                  <div>Validations: <span>HP</span></div>
 
+                  <div>Amount Due: <span>$7.00</span></div>
+
+
+
+          </div>
       </div>
       <div id="help" class="span3"></div>
     </div>
     <div class="htoffset"></div>
-    <div class="row-fluid row-eq-height">
+    <div id="btm-row" class="row-fluid row-eq-height">
         <div id="scanimg" class="span3 offset1">
-            <img src="./img/scanTicket.png" />
+          <div class="row-fluid">
+            <img class="span6 offset3" src="./img/scanTicket.png" />
+          </div>
         </div>
         <div id="videocont" class="span4"></div>
         <div id="paymentopt" class="span3"></div>
