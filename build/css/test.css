@@ -8,6 +8,7 @@ html, body, #container{
   color: black;
   position: relative;
   height: 12%;
+
 }
 
 #paycelogo{
@@ -18,7 +19,7 @@ html, body, #container{
 }
 #welcome{
   text-align: center;
-
+  font-size: 2vw;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -45,8 +46,83 @@ html, body, #container{
   height: 70%;
 }
 
-#content, #content>div{
-  border: 1px solid black;
+#leftsidebar{
+  height: 100%;
+}
+#scanbox{
+  height: 10%;
+}
+#scanbox *{
+  height: 100%;
+  font-size: 2vw;
+  text-align: center;
+}
+
+
+#scanimg{
+  height: 85%;
+  position: relative;
+}
+
+#scanimg>img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  height: 100%;
+
+}
+
+#ticketinfo{
+  height:36%;
+
+  overflow: hidden;
+  text-align: center;
+}
+
+#ticketinfo>div{
+
+  font-size: 2vw;
+  display: inline-block;
+  text-align: left;
+
+}
+#videocont{
+  height: 64%;
+  width: 100%;
+  position: relative;
+}
+#videocont>video{
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%,0%);
+  border: 2px solid #06425C;
+}
+
+#rightsidebar{
+  height: 100%;
+}
+
+#rightsidebar>button, #rightsidebar>div{
+  height: 18%;
+  width: 75%;
+}
+
+#rightsidebar>button{
+  background-color: #06425C;
+  color: white;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  font-size: 2vw;
+  border: none;
+}
+
+#rightsidebar>button:hover{
+  background-color: #51A39D;
+
 }
 
 .bigText{
