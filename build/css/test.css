@@ -78,7 +78,8 @@ html, body, #container{
 
   overflow: hidden;
   text-align: center;
-  padding-top: 5%;
+
+  padding-top: 7%;
 
 }
 
@@ -89,6 +90,10 @@ html, body, #container{
   text-align: left;
 
 
+
+}
+#ticketinfo>div>div{
+  margin-top: 2%;
 }
 #videocont{
   height: 64%;
