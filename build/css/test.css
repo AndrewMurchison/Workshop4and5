@@ -3,6 +3,11 @@ html, body, #container{
   font-family: "Segoe UI Light", Georgia, Serif;
 }
 
+#container{
+
+  padding-bottom: 2%;
+}
+
 #greeting{
 
   color: black;
@@ -79,7 +84,7 @@ html, body, #container{
   overflow: hidden;
   text-align: center;
 
-  padding-top: 7%;
+
 
 }
 
@@ -92,9 +97,7 @@ html, body, #container{
 
 
 }
-#ticketinfo>div>div{
-  margin-top: 2%;
-}
+
 #videocont{
   height: 64%;
   width: 100%;
@@ -132,6 +135,26 @@ html, body, #container{
 #rightsidebar>button:hover{
   background-color: #51A39D;
 
+}
+
+.scaninfo {
+  color: white;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.blue {
+  background-color: #0099ff;
+}
+
+.green {
+  background-color: #66cc66;
+}
+
+.orange {
+  background-color: #ffa64d;
 }
 
 .bigText{
