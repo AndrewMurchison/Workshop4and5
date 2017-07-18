@@ -13,8 +13,6 @@
 
   <link href="css/bootstrap.min.css" rel="stylesheet">
 
-  <link href="css/bootplus.min.css" rel="stylesheet" media="screen">
-  <link href="css/bootplus-responsive.min.css" rel="stylesheet" media="screen">
   <link href="css/test.css" rel="stylesheet">
 
 </head>
@@ -22,11 +20,11 @@
 <body>
   <div id="container" class="container-fluid">
       <div id="greeting" class="row-fluid">
-        <div id="paycelogo" class="span2">
+        <div id="paycelogo" class="col-md-2">
           <img src="./img/Payce-Logo-Horiz.svg" />
         </div>
 
-        <div id="welcome" class="lead">
+        <div id="welcome">
 
           Welcome
           <br />
@@ -35,7 +33,7 @@
         </div>
       </div>
 
-      <div id="instructions" class="row-fluid bigText pull-left lead">
+      <div id="instructions" class="row-fluid bigText">
           <div>
               Please Scan your Valet Ticket
           </div>
@@ -43,7 +41,8 @@
       <div class="htoffset row-fluid"></div>
 
       <div id="content" class="row-fluid row-eq-height">
-          <div id="leftsidebar" class="span3 offset1">
+          <div class="col-md-1"></div>
+          <div id="leftsidebar" class="col-md-3">
               <div id="scanbox">
                 <form>
                   <input type="text" placeholder="Scan Ticket" />
@@ -57,14 +56,14 @@
               </div>
           </div>
 
-          <div id="middle" class="span4">
+          <div id="middle" class="col-md-4">
               <div id="ticketinfo">
-                <div class="lead">
-                  <div>Ticket #: <span>1235-3</span></div>
+                <div>
+                  <div>Ticket #: <col-md->1235-3</col-md-></div>
 
-                  <div>Validations: <span>HP HC</span></div>
+                  <div>Validations: <col-md->HP HC</col-md-></div>
 
-                  <div>Amount Due: <span>$7.00</span></div>
+                  <div>Amount Due: <col-md->$7.00</col-md-></div>
                 </div>
               </div>
 
@@ -75,7 +74,7 @@
               </div>
           </div>
 
-          <div id="rightsidebar" class="span4">
+          <div id="rightsidebar" class="col-md-4">
               <button class="bigText">Help</button>
               <div class="row-fluid"></div>
               <button class="bigText">Debit/Credit</button>
