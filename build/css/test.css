@@ -122,7 +122,7 @@ html, body, #container{
 }
 
 #rightsidebar>button{
-  background-color: #06425C;
+
   color: white;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -132,17 +132,37 @@ html, body, #container{
   border: none;
 }
 
+#help{
+  background-color: #CC6600;
+}
+#paybtn{
+  background-color: #06425C;
+}
+
 #rightsidebar>button:hover{
   background-color: #51A39D;
 
 }
+.amt{
+
+  font-size: 2vw;
+  border-bottom: 1px solid lightgray;
+}
+
+.modal-desc{
+  font-size: 1.5vw;
+}
+
+
 .modal-title{
   text-align: center;
   font-size: 2vw;
 }
 
+
 .modal video{
-  width: 50%;
+  width: 100%;
+  border: 2px solid #06425C;
 }
 
 
