@@ -1,71 +1,64 @@
-html, body{
+html, body, #container{
   height: 100%;
+  font-family: "Segoe UI Light", Georgia, Serif;
 }
 
+#greeting{
+
+  color: black;
+  position: relative;
+  height: 12%;
+}
+
+#paycelogo{
+  position: absolute;
+  top: 50%;
+
+  transform: translate(0%,-50%);
+}
 #welcome{
   text-align: center;
 
-}
-
-#scanbox, #help, #ticketinfo, #paymentopt, #scanimg, #videocont, .inf{
-  border: 1px solid black;
-}
-
-#navig{
-  height: 25%;
-}
-
-#navig *{
-  height: 100%;
-}
-
-#maingrid{
-  border: 1px solid black;
-  height: 75%;
-
-}
-
-#top-row{
-  height: 30%;
-}
-#top-row > div{
-  height: 100%;
-}
-#btm-row{
-  height: 68%;
-}
-
-#btm-row > div{
-  height: 100%;
-}
-#scanimg *{
-  height: 100%;
-}
-
-#scaninp{
-  height: 40%;
-}
-
-
-#ticketinfo{
-  position: relative;
-}
-
-#ticketinfo > div{
   position: absolute;
   top: 50%;
-  left:50%;
+  left: 50%;
   transform: translate(-50%,-50%);
+
 }
 
+#instructions{
+  height: 13%;
+  color: white;
+  background-color: #06425C;
+  font-size: 2vw;
+  position: relative;
+
+}
+
+#instructions>div{
+  position: absolute;
+  top: 50%;
+  transform: translate(5%,-50%);
+}
+
+#content{
+  height: 70%;
+}
+
+#content, #content>div{
+  border: 1px solid black;
+}
+
+.bigText{
+  font-family: "Verdana", Georgia, Serif;
+}
 
 .htoffset{
-  height: 2%;
+  height: 5%;
 }
-
 .row-eq-height {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display:         flex;
-}
+ display: -webkit-box;
+ display: -webkit-flex;
+ display: -ms-flexbox;
+ display: flex;
+ }
