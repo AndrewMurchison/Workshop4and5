@@ -78,6 +78,8 @@ html, body, #container{
 
   overflow: hidden;
   text-align: center;
+  padding-top: 5%;
+
 }
 
 #ticketinfo>div{
@@ -85,6 +87,7 @@ html, body, #container{
   font-size: 2vw;
   display: inline-block;
   text-align: left;
+
 
 }
 #videocont{
