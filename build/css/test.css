@@ -14,7 +14,7 @@ html, body, #container{
 #paycelogo{
   position: absolute;
   top: 50%;
-
+  height:auto;
   transform: translate(0%,-50%);
 }
 #welcome{
@@ -99,6 +99,7 @@ html, body, #container{
   height: 64%;
   width: 100%;
   position: relative;
+  overflow: hidden;
 }
 #videocont>video{
   height: 100%;
