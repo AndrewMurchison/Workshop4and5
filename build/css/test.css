@@ -159,6 +159,10 @@ html, body, #container{
   font-size: 2vw;
 }
 
+.modal video{
+  width: 100%;
+}
+
 
 
 
