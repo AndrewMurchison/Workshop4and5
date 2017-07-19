@@ -145,18 +145,13 @@ html, body, #container{
 }
 .amt{
 
-  font-size: 2vw;
+  
   border-bottom: 1px solid lightgray;
 }
 
-.modal-desc{
-  font-size: 1.5vw;
-}
-
-
 .modal-title{
   text-align: center;
-  font-size: 2vw;
+
 }
 
 .modal video{
