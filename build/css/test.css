@@ -1,11 +1,36 @@
+html{
+	font-size: 16px;
+
+}
+
 html, body, #container{
   height: 100%;
-  font-family: "Segoe UI Light", Georgia, Serif;
+  font-family: "Segoe UI Light";
+  cursor: pointer;
+}
+
+#welcomevid{
+	height: 100%;
+	width: 100%;
 }
 
 #container{
 
   padding-bottom: 2%;
+}
+
+::-webkit-scrollbar{
+	height: 5px;
+	width: 0px;
+}
+
+::-webkit-scrollbar-thumb:horizontal{
+
+	background-color: darkgray;
+	border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
 #greeting{
@@ -21,10 +46,9 @@ html, body, #container{
   top: 50%;
   height:auto;
   transform: translate(0%,-50%);
+  min-width: 15%;
 }
 #welcome{
-  text-align: center;
-  font-size: 2vw;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -36,15 +60,15 @@ html, body, #container{
   height: 13%;
   color: white;
   background-color: #06425C;
-  font-size: 2vw;
   position: relative;
+  padding-left: 20px;
 
 }
 
 #instructions>div{
   position: absolute;
   top: 50%;
-  transform: translate(5%,-50%);
+  transform: translate(0%,-50%);
 }
 
 #content{
@@ -56,11 +80,11 @@ html, body, #container{
 }
 #scanbox{
   height: 10%;
+  max-width: 100%;
 }
 #scanbox *{
   height: 100%;
-  font-size: 2vw;
-  text-align: center;
+  max-width: 100%;
 }
 
 
@@ -75,28 +99,22 @@ html, body, #container{
   left: 50%;
   transform: translate(-50%,-50%);
   height: 100%;
+  max-width: 100%;
 
+}
+
+#scroll{
+  height: 36%;
+  padding-bottom: 20px;
 }
 
 #ticketinfo{
-  height:36%;
-
-  overflow: hidden;
-  text-align: center;
-
-
-
+  height:100%;
+  overflow-x: auto;
 }
 
-#ticketinfo>div{
-
-  font-size: 2vw;
-  display: inline-block;
-  text-align: left;
 
 
-
-}
 
 #videocont{
   height: 64%;
@@ -109,7 +127,7 @@ html, body, #container{
   position: absolute;
   left: 50%;
   transform: translate(-50%,0%);
-  border: 2px solid #06425C;
+
 }
 
 #rightsidebar{
@@ -118,50 +136,58 @@ html, body, #container{
 
 #rightsidebar>button, #rightsidebar>div{
   height: 18%;
-  width: 75%;
+  width: 100%;
 }
 
-#rightsidebar>button{
+#rightsidebar>button, .modal button{
 
   color: white;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
-  font-size: 2vw;
   border: none;
 }
 
-#help{
+#helpbtn{
   background-color: #CC6600;
 }
-#paybtn{
+#paybtn, #canceltrans, .modal button{
   background-color: #06425C;
 }
 
-#rightsidebar>button:hover{
+#rightsidebar>button:active, .modal button:active{
   background-color: #51A39D;
+  outline: none;
 
+}
+
+
+.right{
+	float: right;
+}
+.left{
+	float: left;
 }
 .amt{
-
-  
   border-bottom: 1px solid lightgray;
+  margin-top: 0;
 }
-
-.modal-title{
-  text-align: center;
-
+.center{
+	text-align: center;
 }
 
 .modal video{
   width: 100%;
 }
 
-
-
-
+.modal button{
+	width: 20%;
+	height: 100%;
+}
 .scaninfo {
+  padding-left: 5px;
+  padding-right: 5px;
   color: white;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
@@ -181,9 +207,16 @@ html, body, #container{
   background-color: #ffa64d;
 }
 
-.bigText{
-  font-family: "Verdana", Georgia, Serif;
+.VText{
+  font-family: "Verdana";
 }
+@media (min-width: 400px) { .bigText {font-size:0.5rem;} }
+@media (min-width: 700px) { .bigText {font-size:0.97rem;} }
+@media (min-width:900px) { .bigText {font-size:1.25rem;} }
+@media (min-width:1200px) { .bigText {font-size:1.6rem;} }
+@media (min-width:1400px) { .bigText {font-size:2rem;} }
+@media (min-width:1600px) { .bigText {font-size:2.2rem;} }
+
 
 .htoffset{
   height: 5%;
@@ -194,3 +227,18 @@ html, body, #container{
  display: -ms-flexbox;
  display: flex;
  }
+
+#testarea{
+	height: 300px;
+	border: 2px solid black;
+}
+
+.log{
+	background-color: lightblue;
+	border: 1px solid black;
+
+}
+
+.log:hover{
+	background-color: lightgreen;
+}

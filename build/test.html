@@ -21,91 +21,64 @@
   <div id="container" class="container-fluid">
 
 
-  <div id="payModal" class="modal show" role="dialog" data-backdrop="static" data-keyboard="false">
-    <div class="modal-dialog modal-lg" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title">Payment</h1>
-
-        </div>
-        <div class="modal-body">
-            <div class="container-fluid">
-                <div class="row-eq-height row-fluid">
-                  <div class="col-md-6">
-                    <video autoplay loop>
-                        <source src="./img/credit.mp4" type="video/mp4" />
-                    </video>
-                  </div>
-                  <div class="col-md-6">
-                      <h2 class="amt">Amount Due: $7.00</h2>
-                      <div class="lead">Swipe your card as shown in the video and then follow
-                      the instructions on the card processing unit.</div>
-
-                  </div>
-                </div>
-            </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-primary">Finish</button>
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-        </div>
-      </div>
-  </div>
-</div>
-
-
-
-
-
-
 
 
       <div id="greeting" class="row-fluid">
-        <div id="paycelogo" class="col-md-2">
+        <div id="paycelogo" class="col-xs-2">
           <img src="./img/Payce-Logo-Horiz.svg" />
         </div>
 
-        <div id="welcome">
+        <div id="welcome" class="center bigText">
 
           Welcome
           <br />
-          Time
+          <div id="time">Time</div>
 
         </div>
       </div>
 
-      <div id="instructions" class="row-fluid bigText">
-          <div>
+      <div id="instructions" class="row-fluid VText bigText">
+          <div class="prescan">
               Please Scan your Valet Ticket
           </div>
+
       </div>
       <div class="htoffset row-fluid"></div>
 
       <div id="content" class="row-fluid row-eq-height">
-          <div class="col-md-1"></div>
-          <div id="leftsidebar" class="col-md-3">
-              <div id="scanbox">
-                <form>
-                  <input type="text" placeholder="Scan Ticket" />
+          <div class="col-xs-1"></div>
+          <div id="leftsidebar" class="col-xs-3">
+              <div id="scanbox" class="center">
+                <form class="center">
+                  <input id="scanboxinp" class="center bigText" type="text" placeholder="Scan Ticket" />
                 </form>
               </div>
               <div class="htoffset"></div>
-              <div id="scanimg">
-
-                  <img src="./img/scanTicket.png" />
-
+              <div id="scanimg" class="prescan">
+                <img src="./img/scanTicket.png" />
               </div>
+
           </div>
 
-          <div id="middle" class="col-md-4">
-              <div id="ticketinfo">
-                <div>
-                  <div>Ticket #: <span class="scaninfo blue">1235-3</span></div>
-
-                  <div>Validations: <span class="scaninfo green">HP</span></div>
-
-                  <div>Amount Due: <span class="scaninfo orange">$7.00</span></div>
+          <div id="middle" class="col-xs-4">
+          	<div id="scroll">
+              <div id="ticketinfo" class="center">
+                <div class="postscan bigText col-xs-6">
+                  <span class="right">Ticket #: </span>
+					<br />
+                  <span class="right">Validations: </span>
+					<br />
+                  <span class="right">Amount Due: </span>
                 </div>
+                <div class="postscan bigText col-xs-6">
+                  <span id="ticketentry" class="scaninfo blue left">1235</span>
+					<br />
+                  <div id="valid" class="left"><span class="scaninfo green">Validate</span></div>
+					<br />
+                  <span class="scaninfo orange amtdue left">$7.99</span>
+                </div>
+
+              </div>
               </div>
 
               <div id="videocont">
@@ -115,11 +88,14 @@
               </div>
           </div>
 
-          <div id="rightsidebar" class="col-md-4">
-              <button id="help" class="bigText">Help</button>
+          <div id="rightsidebar" class="col-xs-3">
+              <button id="helpbtn" class="VText bigText">Help</button>
               <div class="row-fluid"></div>
-              <button id="paybtn" class="bigText">Debit/Credit</button>
+              <button id="paybtn" class="VText bigText postbtn" disabled style="opacity:0.2">Debit/Credit</button>
+              <div class="row-fluid"></div>
+              <button id="canceltrans" class="VText bigText postbtn" disabled style="opacity:0.2">Cancel Transaction</button>
           </div>
+          <div class="col-xs-1"></div>
 
       </div>
 
